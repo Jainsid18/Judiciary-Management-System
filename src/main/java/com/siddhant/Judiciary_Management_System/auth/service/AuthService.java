@@ -33,7 +33,7 @@ public class AuthService {
                 .email(request.getEmail())
                 .phone(request.getPhone())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.CITIZEN)
+                .role(request.getRole())
                 .createdAt(LocalDateTime.now())
                 .build();
 
